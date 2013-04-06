@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="QuebraGalhoWS" targetNamespace="http://quebraGalhoWS/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://quebraGalhoWS/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://quebraGalhoWS/" schemaLocation="quebragalhows_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="BuscaTodasProfissoesResponse">
+    <wsdl:part name="parameters" element="tns:BuscaTodasProfissoesResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BuscaServidoresMaoDeObraResponse">
+    <wsdl:part name="parameters" element="tns:BuscaServidoresMaoDeObraResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BuscaServidoresMaoDeObra">
+    <wsdl:part name="parameters" element="tns:BuscaServidoresMaoDeObra">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BuscaTodasProfissoes">
+    <wsdl:part name="parameters" element="tns:BuscaTodasProfissoes">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="QuebraGalhoWS">
+    <wsdl:operation name="BuscaTodasProfissoes">
+      <wsdl:input name="BuscaTodasProfissoes" message="tns:BuscaTodasProfissoes">
+    </wsdl:input>
+      <wsdl:output name="BuscaTodasProfissoesResponse" message="tns:BuscaTodasProfissoesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaServidoresMaoDeObra">
+      <wsdl:input name="BuscaServidoresMaoDeObra" message="tns:BuscaServidoresMaoDeObra">
+    </wsdl:input>
+      <wsdl:output name="BuscaServidoresMaoDeObraResponse" message="tns:BuscaServidoresMaoDeObraResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuebraGalhoWSSoapBinding" type="tns:QuebraGalhoWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="BuscaServidoresMaoDeObra">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="BuscaServidoresMaoDeObra">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="BuscaServidoresMaoDeObraResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscaTodasProfissoes">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="BuscaTodasProfissoes">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="BuscaTodasProfissoesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuebraGalhoWS">
+    <wsdl:port name="QuebraGalhoWSPort" binding="tns:QuebraGalhoWSSoapBinding">
+      <soap:address location="http://localhost:8080/QuebraGalhoWS/services/QuebraGalhoWSPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

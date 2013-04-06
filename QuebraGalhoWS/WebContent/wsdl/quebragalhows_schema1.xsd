@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://quebraGalhoWS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://quebraGalhoWS/" version="1.0">
+<xs:element name="BuscaServidoresMaoDeObra" type="tns:BuscaServidoresMaoDeObra"/>
+<xs:element name="BuscaServidoresMaoDeObraResponse" type="tns:BuscaServidoresMaoDeObraResponse"/>
+<xs:element name="BuscaTodasProfissoes" type="tns:BuscaTodasProfissoes"/>
+<xs:element name="BuscaTodasProfissoesResponse" type="tns:BuscaTodasProfissoesResponse"/>
+<xs:complexType name="BuscaTodasProfissoes">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="BuscaTodasProfissoesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:profissaoVO"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="profissaoVO">
+    <xs:sequence>
+      <xs:element name="_id" type="xs:int"/>
+      <xs:element minOccurs="0" name="_nome" type="xs:string"/>
+      <xs:element minOccurs="0" name="_descricao" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="BuscaServidoresMaoDeObra">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="BuscaServidoresMaoDeObraResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:servidor"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="servidor">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
