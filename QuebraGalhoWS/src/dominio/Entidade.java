@@ -1,14 +1,20 @@
 package dominio;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
 abstract class Entidade
 {
-	private int _id;
+	@Id
+	@GeneratedValue
+	protected long _id;
 
-	protected int getId() {
+	protected long getId() {
 		return _id;
 	}
 
-	protected void setId(int id) {
+	protected void setId(long id) {
 		this._id = id;
 	}
 		

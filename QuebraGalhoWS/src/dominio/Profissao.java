@@ -1,21 +1,41 @@
 package dominio;
 
-public class Profissao extends Entidade
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+
+@Entity
+public class Profissao
 {
-	private String _nome;
-	private String _descricao;
+	@Id
+	@GeneratedValue
+	private long id;
+	
+	private String nome;
+	
+	private String descricao;
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	
 	public String getNome() {
-		return _nome;
+		return nome;
 	}
 	public void setNome(String _nome) {
-		this._nome = _nome;
+		this.nome = _nome;
 	}
 	public String getDescricao() {
-		return _descricao;
+		return descricao;
 	}
 	public void setDescricao(String _descricao) {
-		this._descricao = _descricao;
+		this.descricao = _descricao;
 	}
 	
 	

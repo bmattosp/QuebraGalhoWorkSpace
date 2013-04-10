@@ -1,5 +1,11 @@
 package dominio;
 
-public class Comprador extends Entidade {
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 
+@Entity
+@PrimaryKeyJoinColumn(name="id")
+public class Comprador extends PessoaFisica
+{
+	
 }

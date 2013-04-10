@@ -1,22 +1,21 @@
-/**
- * Servidor.java
- *
- * This file was auto-generated from WSDL
- * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
- */
-
 package dominio;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Servico
+public class Bairro 
 {
 	@Id
 	@GeneratedValue
 	private long id;
 	
 	private String nome;
+	
+	@ManyToOne
+	@JoinColumn (name ="id", updatable=false, insertable=false)
+	private Cidade cidade;
 }
