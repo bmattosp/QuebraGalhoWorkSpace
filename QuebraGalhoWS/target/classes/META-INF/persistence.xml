@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
     <persistence-unit name="quebragalhoPU">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>dominio.Servico</class>
+        <class>dominio.Profissao</class>
+        <class>dominio.Bairro</cl
+        <class>dominio.Endereco</class>s>
+        <class>dominio.Comprador</class>
+        <class>dominio.Endereco</class>
+        <class>dominio.rofisionalass>
+        <class>dominio.PessTelefone</class>
+        <class>dominio.Profisional</class>
+        <class>dominio.Telefone</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/quebragalhoBase"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

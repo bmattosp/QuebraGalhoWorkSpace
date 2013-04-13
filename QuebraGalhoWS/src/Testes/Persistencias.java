@@ -7,6 +7,10 @@ import javax.persistence.Persistence;
 import dominio.Profissao;
 
 
+
+
+
+
 public class Persistencias
 {
 	/**

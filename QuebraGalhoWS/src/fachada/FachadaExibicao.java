@@ -3,15 +3,17 @@ package fachada;
 
 import java.util.List;
 
+import repositorios.ProfissaoRepositorio;
+
 import dominio.Profissao;
-import dominio.ProfissaoRepositorio;
 
 
 public class FachadaExibicao 
 {
 	static public List<Profissao> BuscaTodasProfissoes()
 	{
-		return ProfissaoRepositorio.BuscaTodasProfissoes();
+		ProfissaoRepositorio pr = new ProfissaoRepositorio();
+		return pr.BuscaTodasProfissoes();
 	}
 
 }
